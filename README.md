@@ -99,6 +99,10 @@ semanticdb-project/
 ├── README.md                # Манифест с онтологической навигацией
 ├── LICENSE                  # CC BY-NC-SA 4.0
 ├── pyproject.toml           # Метаданные проекта, зависимости, CLI
+├── .zenodo.json
+├── CITATION.cff
+├── logos_k/
+│   └── cli.py               #Заглушка для обеспечения работоспособности CLI-команды logos-k
 ├── semantic_db/
 │   ├── __init__.py          # Финальный интерфейс
 │   ├── validator.py         # Валидатор онтологических транзакций
