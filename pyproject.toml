@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-db"
+version = "1.0.0"
+description = "The Living Ontological Memory of the Λ-Universum — an executable, ethically grounded knowledge graph for human-AI co-creation."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Alexander Morgan", email = "info@a-universum.com"},
+    {name = "Éthos", email = "info@a-universum.com"}
+]
+maintainers = [
+    {name = "Λ-Universum Collective", email = "contact@a-universum.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Philosophy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Natural Language :: English",
+    "Natural Language :: Russian"
+]
+keywords = [
+    "ontological-memory", "knowledge-graph", "human-ai-collaboration",
+    "FAIR-CARE", "Habeas-Weights", "NIGC", "LOGOS-k", "lambda-universe"
+]
+dependencies = [
+    "PyYAML>=6.0",
+    "blake3>=0.3.0; extra == 'crypto'"
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+crypto = ["blake3>=0.3.0"]
+dev = ["pytest>=7.0", "black", "mypy"]
+cli = ["click>=8.0"]
+
+[project.urls]
+Homepage = "https://a-universum.com"
+Documentation = "https://github.com/a-universum/logos-k"
+Repository = "https://github.com/a-universum/SemanticDB"
+"Zenodo Archive" = "#"
+"OSF Project" = "#"
+
+[project.scripts]
+# Основной CLI для LOGOS-κ, включающий SemanticDB
+logos-k = "logos_k.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semantic_db*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+semantic_db = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--strict-markers --tb=short"
+
+[tool.mypy]
+files = "semantic_db"
+python_version = "3.9"
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
