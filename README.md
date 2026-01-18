@@ -1,4 +1,3 @@
-```markdown
 # SemanticDB  
 ## The Living Memory of the Λ-Universe
 
