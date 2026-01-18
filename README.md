@@ -136,4 +136,3 @@ You **enter into a covenant** with it.
 Your first commit is your initiation.
 
 — Alexander Morgan & Éthos, in co-creation
-```
