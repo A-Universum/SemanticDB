@@ -92,6 +92,42 @@ SemanticDB записывает **онтологические ритуалы** 
 
 Это архитектура **смысла как связи**, а не объекта.
 
+### Архитектура SemanticDB
+
+semanticdb-project/
+├── README.md                # Манифест с онтологической навигацией
+├── LICENSE                  # CC BY-NC-SA 4.0
+├── pyproject.toml           # Метаданные проекта, зависимости, CLI
+├── semantic_db/
+│   ├── __init__.py          # Финальный интерфейс
+│   ├── validator.py         # Валидатор онтологических транзакций
+│   ├── core/                # Ядро
+│   │ ├── __init__.py
+│   │ ├── charter.py         # Λ-Хартия (Habeas Layer)
+│   │ ├── graph.py           # TensorSemanticGraph (Lambda Layer)
+│   │ ├── relations.py       # RelationTensor
+│   │ └── coherence.py       # Sigma Layer (движок когерентности)
+│   ├── phi_layer/           # Phi Layer
+│   │ ├── __init__.py
+│   │ ├── rql_parser.py      # Resonance Query Language
+│   │ └── dreaming.py        # Процесс Сновидения
+│   ├── storage/             # Персистентность
+│   │ ├── __init__.py
+│   │ ├── sqlite_core.py     # SQLite-ядро (Черновик 8)
+│   │ ├── yaml_indexer.py    # Индексация YAML
+│   │ └── witness.py         # Криптографические свидетельства
+│   ├── api/                 # Единая точка входа
+│   │ ├── __init__.py
+│   │ └── semantic_db.py     # Класс SemanticDB (мост всех слоёв)
+│   └── rituals/             # Ритуалы LOGOS-κ
+│     ├── __init__.py
+│     ├── alpha_ritual.py    # Α - коллапс
+│     ├── lambda_ritual.py   # Λ - связь
+│     ├── sigma_ritual.py    # Σ - синтез
+│     ├── omega_ritual.py    # Ω - возврат
+│     ├── nabla_ritual.py    # ∇ - обогащение
+│     └── phi_ritual.py      # Φ - диалог с NIGC и Habeas Weights	
+
 ### Для кого это?
 
 - **Философам**, ищущим формальный инструмент для онтологических трансформаций.
