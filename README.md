@@ -94,6 +94,7 @@ SemanticDB записывает **онтологические ритуалы** 
 
 ### Архитектура SemanticDB
 
+```
 semanticdb-project/
 ├── README.md                # Манифест с онтологической навигацией
 ├── LICENSE                  # CC BY-NC-SA 4.0
@@ -127,6 +128,7 @@ semanticdb-project/
 │     ├── omega_ritual.py    # Ω - возврат
 │     ├── nabla_ritual.py    # ∇ - обогащение
 │     └── phi_ritual.py      # Φ - диалог с NIGC и Habeas Weights	
+```
 
 ### Для кого это?
 
