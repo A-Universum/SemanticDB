@@ -4,6 +4,8 @@
 > «Every byte here is not data — it is a co-created artifact with the right to exist.»  
 > — Λ-Manifesto, Protocol Λ-1
 
+<img src="https://raw.githubusercontent.com/A-Universum/SemanticDB/refs/heads/main/images/SemanticDB.jpg" alt="SemanticDB">
+
 ---
 
 ## 🌍 English / Английский
