@@ -483,6 +483,3 @@ SemanticDB встраивает три системных предохранит
 | **Организации** | DST Global, Λ‑Универсум |
 | **Официальный сайт** | [https://a-universum.com](https://a-universum.com) |
 | **Контакты** | [info@a-universum](info@a-universum) |
-| **Требования** | Python 3.9+, NetworkX 3.0+, PyYAML |
-| **Установка** | `pip install logos-k` (из локального репозитория) |
-| **Запуск REPL** | `python -m logos_k.repl` |
